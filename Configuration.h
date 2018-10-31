@@ -91,7 +91,7 @@
 // */
 //
 // Enable to show the bitmap in Marlin/_Bootscreen.h on startup.
-//#define SHOW_CUSTOM_BOOTSCREEN
+#define SHOW_CUSTOM_BOOTSCREEN
 
 // Enable to show the bitmap in Marlin/_Statusscreen.h on the status screen.
 //#define CUSTOM_STATUS_SCREEN_IMAGE
@@ -124,7 +124,7 @@
 // The following define selects which electronics board you have.
 // Please choose the name from boards.h that matches your setup
 #ifndef MOTHERBOARD
-  #define MOTHERBOARD BOARD_MKS_BASE
+  #define MOTHERBOARD BOARD_MKS_GEN_L
 #endif
 
 // Optional custom name for your RepStrap or other custom machine
@@ -373,9 +373,9 @@
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
   // Tevo Flash
-  #define DEFAULT_Kp 22.2
-  #define DEFAULT_Ki 1.08
-  #define DEFAULT_Kd 114
+  #define DEFAULT_Kp 21.90
+  #define DEFAULT_Ki 2.01
+  #define DEFAULT_Kd 59.66
 
   // MakerGear
   //#define DEFAULT_Kp 7.0
@@ -546,7 +546,7 @@
 #define X2_DRIVER_TYPE TMC2100
 #define Y2_DRIVER_TYPE TMC2100
 #define Z2_DRIVER_TYPE TMC2100
-#define E0_DRIVER_TYPE LV8729
+#define E0_DRIVER_TYPE TMC2100
 #define E1_DRIVER_TYPE LV8729
 #define E2_DRIVER_TYPE LV8729
 #define E3_DRIVER_TYPE LV8729
@@ -598,7 +598,7 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.058, 80.058, 399.2901, 408 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.058, 80.058, 399.2901, 404 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -1055,14 +1055,6 @@
   #define GRID_MAX_POINTS_X 10      // Don't use more than 15 points per axis, implementation limited.
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
-// ajoute pas greg (copie du configuration.h de tevo)
-  //#define UBL_PROBE_PT_1_X 39       // Probing points for 3-Point leveling of the mesh
-  //#define UBL_PROBE_PT_1_Y 180
-  //#define UBL_PROBE_PT_2_X 39
-  //#define UBL_PROBE_PT_2_Y 20
-  //#define UBL_PROBE_PT_3_X 180
-  //#define UBL_PROBE_PT_3_Y 20
-// fin de l'ajout
   #define UBL_MESH_EDIT_MOVES_Z     // Sophisticated users prefer no movement of nozzle
   #define UBL_SAVE_ACTIVE_ON_M500   // Save the currently active mesh in the current slot on M500
 
@@ -1094,6 +1086,15 @@
   //#define PROBE_PT_2_Y 20
   //#define PROBE_PT_3_X 170
   //#define PROBE_PT_3_Y 20
+
+// ajoute pas greg (copie du configuration.h de tevo)
+  //#define UBL_PROBE_PT_1_X 39       // Probing points for 3-Point leveling of the mesh
+  //#define UBL_PROBE_PT_1_Y 180
+  //#define UBL_PROBE_PT_2_X 39
+  //#define UBL_PROBE_PT_2_Y 20
+  //#define UBL_PROBE_PT_3_X 180
+  //#define UBL_PROBE_PT_3_Y 20
+// fin de l'ajout
 #endif
 
 /**
@@ -1394,7 +1395,7 @@
  *
  * :{ 'en':'English', 'an':'Aragonese', 'bg':'Bulgarian', 'ca':'Catalan', 'cn':'Chinese', 'cz':'Czech', 'cz_utf8':'Czech (UTF8)', 'de':'German', 'el':'Greek', 'el-gr':'Greek (Greece)', 'es':'Spanish', 'es_utf8':'Spanish (UTF8)', 'eu':'Basque-Euskera', 'fi':'Finnish', 'fr':'French', 'fr_utf8':'French (UTF8)', 'gl':'Galician', 'hr':'Croatian', 'it':'Italian', 'kana':'Japanese', 'kana_utf8':'Japanese (UTF8)', 'nl':'Dutch', 'pl':'Polish', 'pt':'Portuguese', 'pt-br':'Portuguese (Brazilian)', 'pt-br_utf8':'Portuguese (Brazilian UTF8)', 'pt_utf8':'Portuguese (UTF8)', 'ru':'Russian', 'sk_utf8':'Slovak (UTF8)', 'tr':'Turkish', 'uk':'Ukrainian', 'zh_CN':'Chinese (Simplified)', 'zh_TW':'Chinese (Taiwan)', 'test':'TEST' }
  */
-#define LCD_LANGUAGE fr
+#define LCD_LANGUAGE en
 
 /**
  * LCD Character Set
